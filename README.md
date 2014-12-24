@@ -1,4 +1,4 @@
-dartvacay
+Dart Vacay
 =========
 
-Throw a dart - embark on an adventure!
+Dart Vacay is a webapp that generates a user a completely random vacation.
