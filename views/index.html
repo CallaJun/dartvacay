@@ -4,10 +4,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Welcome</h1>
+	<h1>Welcome! Are you ready to generate a random vacation?</h1>
 	<form action="throw">
 		<input type="text" class="form-control" name="name"></label></p>
+		<input type="text" class="form-control" id="today" name="today" value="">
 		<br><button type="submit" class="btn btn-default">Go!</button>
 	</form>
 </body>
+<script>
+	var today = new Date();
+	document.getElementById('today').value = today;
+</script>
 </html>

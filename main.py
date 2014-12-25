@@ -33,7 +33,8 @@ class MainHandler(webapp2.RequestHandler):
 
 class ThrowHandler(webapp2.RequestHandler):
     def get(self):
-    	template_values = {'name' : self.request.get('name')
+    	template_values = {'name' : self.request.get('name'),
+    	'today' : self.request.get('today')
         }
         template = jinja_environment.get_template('views/throw.html')
         self.response.out.write(template.render(template_values))
