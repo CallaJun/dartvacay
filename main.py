@@ -20,6 +20,11 @@ import os
 import webapp2
 import urllib2
 import json
+import random
+
+destinations = ['London, England','Dublin, Ireland','Los Angeles, California',
+'New York City, New York','Nuku\'alofa, Tonga'
+]
 
 jinja_environment = jinja2.Environment(loader=
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -34,7 +39,8 @@ class MainHandler(webapp2.RequestHandler):
 class ThrowHandler(webapp2.RequestHandler):
     def get(self):
     	template_values = {'name' : self.request.get('name'),
-    	'today' : self.request.get('today')
+    	'today' : self.request.get('today'),
+    	'destination' : random.choice(destinations)
         }
         template = jinja_environment.get_template('views/throw.html')
         self.response.out.write(template.render(template_values))
