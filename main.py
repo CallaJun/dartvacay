@@ -23,8 +23,16 @@ import json
 import random
 
 destinations = ['London, England','Dublin, Ireland','Los Angeles, California',
-'New York City, New York','Nuku\'alofa, Tonga'
+'New York City, New York','Nuku\'alofa, Tonga','Berlin, Germany','Sydney, Australia',
+'Vancouver, Canada'
 ]
+#may need to eventually make this a dictionary depending on which API I use
+'''
+destinations = {
+	'London, England' : ['something'],
+	'Dublin, Ireland' : ['something']
+}
+'''
 
 jinja_environment = jinja2.Environment(loader=
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
